@@ -9,8 +9,6 @@ def selection_sort(arr):
                 arr[cur_index], arr[j] = arr[j], arr[cur_index]
             j += 1
 
-        # TO-DO: swap
-
     return arr
 
 
