@@ -16,7 +16,6 @@ def merge(arrA, arrB):
         if len(arrB) == 0:
             merged_arr[i:i+len(arrA)] = arrA
             arrA = []
-
         else:
             if arrA[0] <= arrB[0]:
                 merged_arr[i] = arrA[0]
@@ -24,7 +23,7 @@ def merge(arrA, arrB):
             elif arrA[0] >= arrB[0]:
                 merged_arr[i] = arrB[0]
                 arrB = arrB[1:]
-            print(merged_arr)
+            # print(merged_arr)
     return merged_arr
 
 
@@ -43,13 +42,13 @@ def merge_sort(arr):
         left_array = merge_sort(arr[0:partition])
         # * make a second array representing values on the right side of the array's partition -- containing entries (array_length // 2) + 1 through end
         right_array = merge_sort(arr[partition:])
-        print(f'RIGHT_ARRAY : {right_array}')
+        # print(f'RIGHT_ARRAY : {right_array}')
         arr = merge(left_array, right_array)
 
     return arr
 
 
-print(merge_sort([1]))
+print(merge_sort(test_array))
 # STRETCH: implement an in-place merge sort algorithm
 
 
